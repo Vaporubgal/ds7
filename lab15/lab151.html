@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Hola Mundo en JQuery</title>
+        <script src="jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <h1>Hola mundo en JQuery</h1>
+        <p></p><p></p><p></p><p></p>
+        <script>jQuery( "p" ).html( "Hola mundo" );
+        </script>
+        </body>
+</html>
+
+<html>
+    <head>
+        <script src="jquery-3.1.1.js"></script>
+        <body>
+            <h1>Ejemplo JQuery -Selectores</h1>
+            <div id="divTest1"></div>
+            <script type="text/javascript">
+            $(function()
+            {
+                $("#divTest1").text("Texto de ejemplo");
+            })
+            </script>
+        </body>
+</html>
+
+<html>
+    <head>
+        <script src="jquery-3.1.1.js"></script>
+        <body>
+            <h1>Ejemplo JQuery -Selectores</h1>
+            <ul>
+                <li class="test">Prueba 1</li>
+                <li>Prueba 2</li>
+                <li class="test">Prueba 3</li>
+            </ul>
+            <script type="text/javascript">
+            $(function()
+            {
+                $(".test").css("font-weight","bold");
+            })
+            </script>
+        </body>
+</html>
+
+<html>
+    <head>
+        <script src="jquery-3.1.1.js"></script>
+        <body>
+            <h1>Ejemplo JQuery -Selectores</h1>
+            
+            <span title="Titulo 1">Prueba 1</span></br>
+            <span>Prueba 2</span></br>
+            <span title="Titulo 3">Prueba 3</span></br>
+            
+            <script type="text/javascript">
+            $(function()
+            {
+                $("[title]").css("text-decoration","underline");
+            }
+            )
+            </script>
+        </body>
+</html>
+
+<html>
+    <head>
+        <script src="jquery-3.1.1.js"></script>
+        <body>
+            <h1>Ejemplo JQuery -Encadenamiento</h1>
+            <div id="divTest1"></div>
+            <script type="text/javascript">
+                $("#divTest1").text("Hola, mundo!").css("color","blue");
+            </script>
+        </body>
+</html>
+
+<html>
+    <head>
+        <script src="jquery-3.1.1.js"></script>
+        <body>
+            <h1>Ejemplo JQuery -Encadenamiento</h1>
+            <div id="divTest2"></div>
+            <script type="text/javascript">
+                $("#divTest2").text("Hola, mundo!")
+                .removeClass("blue")
+                .addClass("bold").
+                css("color","blue");
+            </script>
+        </body>
+</html>
+
+<html>
+    <head>
+        <title>Ejemplode jQuery con Document Ready</title>
+        <script type="text/javascript"src="jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <div id="divTest1"></div>
+        <script type="text/javascript">
+        function DocumentReady(){
+            $("#divTest1").text("Hola Mundo!");
+        }
+        
+        $(document).ready(DocumentReady);
+        </script>
+    </body>
+</html>
+
+<html>
+    <head>
+        <title>Ejemplo de jQuery con Document Ready</title>
+        <script type="text/javascript"src="jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <div id="divTest1"></div>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                $("#divTest1").text("Hola Mundo!");
+            }
+            );
+        </script>
+    </body>
+</html>
+
+<html>
+    <head>
+        <script src="jquery-3.1.1.js"></script>
+        <body>
+            <h1>EjemploJQuery -Eventos</h1>
+            <a href="javascript:void(0);">Prueba</a>
+            <script type="text/javascript">
+                $(function()
+                {
+                    $("a, span").bind("click", function(){
+                    alert("Hola Mundo desde JQuery");
+                    });
+                });
+            </script>
+        </body>
+</html>
