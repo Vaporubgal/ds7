@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+    </style>
+    <title>VM Photography - Contacto</title>
+</head>
+<body class="contacto-page">
+    <header style="background-image: url('img/fondoHeader.jpg'); background-size: cover; background-position: center;">
+        <h1>VM Photography</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+    <main class="contacto" style="background-image: url('img/fondoContacto.jpg'); background-size: cover; background-position: center;">
+        <section>
+            <h2>Contacto</h2>
+            <p>¿Tienes preguntas o deseas reservar nuestros servicios? ¡Contáctanos!</p>
+
+            <?php
+            session_start();
+            if (!empty($_SESSION['mensajeConfirmacion'])):
+            ?>
+                <div>
+                    <?php echo $_SESSION['mensajeConfirmacion']; ?>
+                </div>
+            <?php
+                $_SESSION['mensajeConfirmacion'] = ''; // Limpiar la variable de sesión
+            endif;
+            ?>
+
+            <form action="procesar_contacto.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 VM Photography</p>
+    </footer>
+</body>
+</html>

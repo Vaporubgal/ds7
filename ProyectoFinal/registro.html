@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+        section {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgba(207, 207, 207, 0.9);
+            padding-left: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        body.registro-page main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        body.registro-page form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        body.registro-page form label {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: #181818;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #181818;
+        }
+
+        body.registro-page main.registro h2 {
+            font-size: 32px;
+            color: #181818;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+
+        body.registro-page form input,
+        body.registro-page form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: #181818;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #181818;
+        }
+
+        body.registro-page form input[type="submit"] {
+            background-color: rgb(236, 154, 21);
+            color: #fff;
+            padding: 15px; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        body.registro-page form input[type="submit"]:hover {
+            background-color: rgb(233, 166, 58); 
+        }
+    </style>
+    <title>VM Photography - Registro</title>
+</head>
+<body class="registro-page">
+    <header style="background-image: url('img/fondoHeader.jpg'); background-size: cover; background-position: center;">
+        <h1>VM Photography</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+    <main class="registro" style="background-image: url('img/fondoLogin.jpg'); background-size: cover; background-position: center;">
+        <section>
+            <h2>Registro</h2>
+            
+            <form action="registro.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <input type="submit" value="Registrarse">
+            </form>
+            <p style="font-size: 16px; color: #181818; margin-top: 0;">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 VM Photography</p>
+    </footer>
+</body>
+</html>

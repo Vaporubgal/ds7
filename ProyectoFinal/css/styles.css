@@ -1,0 +1,297 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a1a1a1;
+    color: #333;
+}
+
+header {
+    font-size: large;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+nav {
+    background-color: #181818;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; 
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: rgb(236, 154, 21);
+}
+
+
+main {
+    padding:100px;
+}
+
+section {
+    background-color: #303030b1;
+    padding: 50px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2{
+    font-size: 50px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color:rgb(255, 255, 255);
+}
+
+section p{
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+section a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: rgb(236, 154, 21);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+section a:hover {
+    background-color: rgb(239, 182, 89);
+}
+
+footer {
+
+    text-align: center;
+    background-color: #181818;
+    color: #fff;
+    padding: 5px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: rgb(201, 126, 6);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:rgb(255, 255, 255);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery img:is([src*=".jpeg"], [src*=".jpg"], [src*=".png"]) {
+    aspect-ratio: 1 / 1;
+}
+
+body.servicios-page main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 0px; 
+    padding: 30px;
+}
+
+body.servicios-page .service {
+    border: 2px solid #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #181818;
+}
+
+body.servicios-page .service img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+body.servicios-page .service h2,
+body.servicios-page .service ul,
+body.servicios-page .service p {
+    margin: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+body.servicios-page .service p {
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(236, 154, 21);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+body.servicios-page .service ul {
+    list-style: none;
+    padding: 0;
+}
+
+body.servicios-page .opciones {
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+body.servicios-page .opciones p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; 
+}
+
+body.servicios-page .opciones .button {
+    display: inline-block;
+    background-color: rgb(236, 154, 21);
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+body.servicios-page .opciones .button:hover {
+    background-color: rgb(236, 154, 21);
+}
+
+.opciones{
+    font-weight: 500;
+}
+
+
+body.contacto-page main {
+    text-align: center;
+    padding: 30px;
+}
+
+body.contacto-page form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+body.contacto-page form label,
+body.contacto-page form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+body.contacto-page form input,body.contacto-page form textarea{
+    color: #000000;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+body.contacto-page form textarea {
+    resize: vertical;
+}
+
+body.contacto-page form input[type="submit"] {
+    background-color: rgb(236, 154, 21);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.contacto-page form input[type="submit"]:hover {
+    background-color: rgb(233, 166, 58);
+}
+
+body.login-page main.login {
+    text-align: center;
+    padding: 50px;
+}
+
+body.login-page main.login section {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(207, 207, 207, 0.9);
+    padding-left: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.login-page main.login h2 {
+    font-size: 32px;
+    color: #181818;
+}
+
+
+body.login-page main.login form label,
+body.login-page main.login form input[type="email"],
+body.login-page main.login form input[type="password"],
+body.login-page main.login form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: #181818;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #181818;
+}
+
+body.login-page main.login form input[type="submit"] {
+    background-color:  rgb(236, 154, 21);
+    color: #fff;
+    cursor: pointer;
+}
+
+body.login-page main.login form input[type="submit"]:hover {
+    background-color:  rgb(236, 154, 21);
+}
